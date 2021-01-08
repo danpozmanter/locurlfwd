@@ -62,7 +62,8 @@ java -jar locurlfwd.jar 8080 -d http://localhost:3000 -d api^http://localhost:50
 ```
 
 Supports `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
-Content Encoding Support includes Brotli (BR) and GZIP.
+
+Content encoding support includes Brotli (BR) and GZIP.
 
 ### Limitations
 
