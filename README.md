@@ -1,6 +1,6 @@
 ## locurlfwd
 
-Local URL Forwarding aka commandline reverse proxy.
+Local URL Forwarding.
 
 Built on:
 
