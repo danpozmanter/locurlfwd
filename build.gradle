@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+}
+
+group 'locurlfwd'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "MainKt"
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.jetbrains.kotlinx:kotlinx-cli:0.3"
+    implementation "io.jooby:jooby:2.9.5"
+    implementation "io.jooby:jooby-netty:2.9.5"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation "org.brotli:dec:0.1.2"
+}
